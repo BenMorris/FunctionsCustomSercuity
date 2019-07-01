@@ -1,27 +1,37 @@
-using System;
-using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using FunctionsCustomSercuity.Binding;
-using System.Security.Claims;
+using FunctionsCustomSercuity.AccessTokens;
 
 namespace FunctionsCustomSercuity
 {
-    public static class ExampleHttpFunction
+    public class ExampleHttpFunction
     {
-        [FunctionName("ExampleHttpFunction")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "example")] HttpRequest req, 
-            ILogger log, 
-            [AccessToken] ClaimsPrincipal principal)
+        private readonly IAccessTokenProvider _tokenProvider;
+
+        public ExampleHttpFunction(IAccessTokenProvider tokenProvider)
         {
-            log.LogInformation($"Request received for {principal.Identity.Name}.");
-            return new OkResult();
+            _tokenProvider = tokenProvider;
+        }
+
+        [FunctionName("ExampleHttpFunction")]
+        public IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "example")] HttpRequest req,  ILogger log)
+        {
+            var result = _tokenProvider.ValidateToken(req);
+
+            if (result.Status == AccessTokenStatus.Valid)
+            {
+                log.LogInformation($"Request received for {result.Principal.Identity.Name}.");
+                return new OkResult();
+            }
+            else
+            {
+                return new UnauthorizedResult();
+            }
         }
     }
 }
