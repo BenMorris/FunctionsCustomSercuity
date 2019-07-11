@@ -4,9 +4,9 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using FunctionsCustomSercuity.AccessTokens;
+using TokenAuthInjection.AccessTokens;
 
-namespace FunctionsCustomSercuity
+namespace TokenAuthInjection
 {
     public class ExampleHttpFunction
     {

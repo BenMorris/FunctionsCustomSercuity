@@ -1,4 +1,4 @@
-﻿namespace FunctionsCustomSercuity.AccessTokens
+﻿namespace TokenAuthInjection.AccessTokens
 {
     using Microsoft.AspNetCore.Http;
 

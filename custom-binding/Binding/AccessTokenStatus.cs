@@ -1,4 +1,4 @@
-﻿namespace FunctionsCustomSercuity.AccessTokens
+﻿namespace TokenAuthCustomBinding.Binding
 {
     public enum AccessTokenStatus
     {

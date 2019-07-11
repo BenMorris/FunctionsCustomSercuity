@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsCustomSercuity", "FunctionsCustomSercuity.csproj", "{4DF1F702-0FCD-4664-8836-F81444F05A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuthCustomBinding", "custom-binding\TokenAuthCustomBinding.csproj", "{39607A89-2BD3-4CF1-A6CB-C82F9ED00344}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "custom-binding", "custom-binding", "{CE5AEC1E-4158-449D-AB69-6CF9A3BE5DD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependency-injection", "dependency-injection", "{A178FE04-8A2D-4804-BA3B-B66458F9292B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuthInjection", "dependency-injection\TokenAuthInjection.csproj", "{094D6778-B6F6-454A-9193-FE90370CDA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4DF1F702-0FCD-4664-8836-F81444F05A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DF1F702-0FCD-4664-8836-F81444F05A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DF1F702-0FCD-4664-8836-F81444F05A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DF1F702-0FCD-4664-8836-F81444F05A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39607A89-2BD3-4CF1-A6CB-C82F9ED00344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39607A89-2BD3-4CF1-A6CB-C82F9ED00344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39607A89-2BD3-4CF1-A6CB-C82F9ED00344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39607A89-2BD3-4CF1-A6CB-C82F9ED00344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094D6778-B6F6-454A-9193-FE90370CDA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094D6778-B6F6-454A-9193-FE90370CDA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094D6778-B6F6-454A-9193-FE90370CDA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094D6778-B6F6-454A-9193-FE90370CDA41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39607A89-2BD3-4CF1-A6CB-C82F9ED00344} = {CE5AEC1E-4158-449D-AB69-6CF9A3BE5DD4}
+		{094D6778-B6F6-454A-9193-FE90370CDA41} = {A178FE04-8A2D-4804-BA3B-B66458F9292B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {45CF0706-337F-48F4-89AB-48E855D67052}

@@ -1,10 +1,10 @@
 ﻿using System;
-using FunctionsCustomSercuity.AccessTokens;
+using TokenAuthInjection.AccessTokens;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: FunctionsStartup(typeof(FunctionsCustomSercuity.Startup))]
-namespace FunctionsCustomSercuity
+[assembly: FunctionsStartup(typeof(TokenAuthInjection.Startup))]
+namespace TokenAuthInjection
 {
     /// <summary>
     /// Runs when the Azure Functions host starts.
