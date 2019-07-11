@@ -1,4 +1,4 @@
-﻿namespace FunctionsCustomSercuity.Binding
+﻿namespace TokenAuthCustomBinding.Binding
 {
     using System;
     using System.Threading.Tasks;

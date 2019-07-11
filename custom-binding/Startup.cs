@@ -1,10 +1,10 @@
-﻿using FunctionsCustomSercuity;
-using FunctionsCustomSercuity.Binding;
+﻿using TokenAuthCustomBinding;
+using TokenAuthCustomBinding.Binding;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Hosting;
 
 [assembly: WebJobsStartup(typeof(Startup))]
-namespace FunctionsCustomSercuity
+namespace TokenAuthCustomBinding
 {
     /// <summary>
     /// Runs when the Azure Functions host starts.

@@ -1,4 +1,4 @@
-﻿namespace FunctionsCustomSercuity.Binding
+﻿namespace TokenAuthCustomBinding.Binding
 {
     using System.Threading.Tasks;
     using Microsoft.Azure.WebJobs.Host.Bindings;
