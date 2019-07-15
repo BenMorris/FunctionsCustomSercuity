@@ -18,9 +18,9 @@ namespace TokenAuthCustomBinding
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "example")] HttpRequest req, 
             ILogger log, 
-            [AccessToken] ClaimsPrincipal principal)
+            [AccessToken] AccessTokenResult accessTokenResult)
         {
-            log.LogInformation($"Request received for {principal.Identity.Name}.");
+            log.LogInformation($"Request received for {accessTokenResult.Principal?.Identity.Name ?? "anonymous"}.");
             return new OkResult();
         }
     }
